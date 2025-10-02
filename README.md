@@ -41,14 +41,29 @@ The `BuildName` function:
 import (
     "context"
     "github.com/bborbe/metrics"
+    "github.com/prometheus/client_golang/prometheus"
 )
 
+// Create a registry and register your metrics
+prometheusRegistry := prometheus.NewRegistry()
+
+// Create and configure a pusher using the fluent API
 pusher := metrics.NewPusher(
-    "http://pushgateway:9091",
-    metrics.BuildName("my_service"),
-)
+    "http://monitoring-pushgateway:9091",
+    metrics.BuildName("kafka", "backup", "my_topic"),
+).Gatherer(prometheusRegistry)
 
+// Push metrics to the gateway
 if err := pusher.Push(context.Background()); err != nil {
     // handle error
 }
+```
+
+The pusher supports a fluent API for configuration:
+
+```go
+pusher := metrics.NewPusher(url, jobName).
+    Gatherer(registry).              // Use a custom registry
+    Collector(myCollector).          // Add a specific collector
+    Client(customHTTPClient)         // Use a custom HTTP client
 ```

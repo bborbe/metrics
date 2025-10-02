@@ -6,9 +6,44 @@ import (
 	"sync"
 
 	"github.com/bborbe/metrics"
+	"github.com/prometheus/client_golang/prometheus"
+	"github.com/prometheus/client_golang/prometheus/push"
 )
 
 type MetricsPusher struct {
+	ClientStub        func(push.HTTPDoer) metrics.Pusher
+	clientMutex       sync.RWMutex
+	clientArgsForCall []struct {
+		arg1 push.HTTPDoer
+	}
+	clientReturns struct {
+		result1 metrics.Pusher
+	}
+	clientReturnsOnCall map[int]struct {
+		result1 metrics.Pusher
+	}
+	CollectorStub        func(prometheus.Collector) metrics.Pusher
+	collectorMutex       sync.RWMutex
+	collectorArgsForCall []struct {
+		arg1 prometheus.Collector
+	}
+	collectorReturns struct {
+		result1 metrics.Pusher
+	}
+	collectorReturnsOnCall map[int]struct {
+		result1 metrics.Pusher
+	}
+	GathererStub        func(prometheus.Gatherer) metrics.Pusher
+	gathererMutex       sync.RWMutex
+	gathererArgsForCall []struct {
+		arg1 prometheus.Gatherer
+	}
+	gathererReturns struct {
+		result1 metrics.Pusher
+	}
+	gathererReturnsOnCall map[int]struct {
+		result1 metrics.Pusher
+	}
 	PushStub        func(context.Context) error
 	pushMutex       sync.RWMutex
 	pushArgsForCall []struct {
@@ -22,6 +57,189 @@ type MetricsPusher struct {
 	}
 	invocations      map[string][][]interface{}
 	invocationsMutex sync.RWMutex
+}
+
+func (fake *MetricsPusher) Client(arg1 push.HTTPDoer) metrics.Pusher {
+	fake.clientMutex.Lock()
+	ret, specificReturn := fake.clientReturnsOnCall[len(fake.clientArgsForCall)]
+	fake.clientArgsForCall = append(fake.clientArgsForCall, struct {
+		arg1 push.HTTPDoer
+	}{arg1})
+	stub := fake.ClientStub
+	fakeReturns := fake.clientReturns
+	fake.recordInvocation("Client", []interface{}{arg1})
+	fake.clientMutex.Unlock()
+	if stub != nil {
+		return stub(arg1)
+	}
+	if specificReturn {
+		return ret.result1
+	}
+	return fakeReturns.result1
+}
+
+func (fake *MetricsPusher) ClientCallCount() int {
+	fake.clientMutex.RLock()
+	defer fake.clientMutex.RUnlock()
+	return len(fake.clientArgsForCall)
+}
+
+func (fake *MetricsPusher) ClientCalls(stub func(push.HTTPDoer) metrics.Pusher) {
+	fake.clientMutex.Lock()
+	defer fake.clientMutex.Unlock()
+	fake.ClientStub = stub
+}
+
+func (fake *MetricsPusher) ClientArgsForCall(i int) push.HTTPDoer {
+	fake.clientMutex.RLock()
+	defer fake.clientMutex.RUnlock()
+	argsForCall := fake.clientArgsForCall[i]
+	return argsForCall.arg1
+}
+
+func (fake *MetricsPusher) ClientReturns(result1 metrics.Pusher) {
+	fake.clientMutex.Lock()
+	defer fake.clientMutex.Unlock()
+	fake.ClientStub = nil
+	fake.clientReturns = struct {
+		result1 metrics.Pusher
+	}{result1}
+}
+
+func (fake *MetricsPusher) ClientReturnsOnCall(i int, result1 metrics.Pusher) {
+	fake.clientMutex.Lock()
+	defer fake.clientMutex.Unlock()
+	fake.ClientStub = nil
+	if fake.clientReturnsOnCall == nil {
+		fake.clientReturnsOnCall = make(map[int]struct {
+			result1 metrics.Pusher
+		})
+	}
+	fake.clientReturnsOnCall[i] = struct {
+		result1 metrics.Pusher
+	}{result1}
+}
+
+func (fake *MetricsPusher) Collector(arg1 prometheus.Collector) metrics.Pusher {
+	fake.collectorMutex.Lock()
+	ret, specificReturn := fake.collectorReturnsOnCall[len(fake.collectorArgsForCall)]
+	fake.collectorArgsForCall = append(fake.collectorArgsForCall, struct {
+		arg1 prometheus.Collector
+	}{arg1})
+	stub := fake.CollectorStub
+	fakeReturns := fake.collectorReturns
+	fake.recordInvocation("Collector", []interface{}{arg1})
+	fake.collectorMutex.Unlock()
+	if stub != nil {
+		return stub(arg1)
+	}
+	if specificReturn {
+		return ret.result1
+	}
+	return fakeReturns.result1
+}
+
+func (fake *MetricsPusher) CollectorCallCount() int {
+	fake.collectorMutex.RLock()
+	defer fake.collectorMutex.RUnlock()
+	return len(fake.collectorArgsForCall)
+}
+
+func (fake *MetricsPusher) CollectorCalls(stub func(prometheus.Collector) metrics.Pusher) {
+	fake.collectorMutex.Lock()
+	defer fake.collectorMutex.Unlock()
+	fake.CollectorStub = stub
+}
+
+func (fake *MetricsPusher) CollectorArgsForCall(i int) prometheus.Collector {
+	fake.collectorMutex.RLock()
+	defer fake.collectorMutex.RUnlock()
+	argsForCall := fake.collectorArgsForCall[i]
+	return argsForCall.arg1
+}
+
+func (fake *MetricsPusher) CollectorReturns(result1 metrics.Pusher) {
+	fake.collectorMutex.Lock()
+	defer fake.collectorMutex.Unlock()
+	fake.CollectorStub = nil
+	fake.collectorReturns = struct {
+		result1 metrics.Pusher
+	}{result1}
+}
+
+func (fake *MetricsPusher) CollectorReturnsOnCall(i int, result1 metrics.Pusher) {
+	fake.collectorMutex.Lock()
+	defer fake.collectorMutex.Unlock()
+	fake.CollectorStub = nil
+	if fake.collectorReturnsOnCall == nil {
+		fake.collectorReturnsOnCall = make(map[int]struct {
+			result1 metrics.Pusher
+		})
+	}
+	fake.collectorReturnsOnCall[i] = struct {
+		result1 metrics.Pusher
+	}{result1}
+}
+
+func (fake *MetricsPusher) Gatherer(arg1 prometheus.Gatherer) metrics.Pusher {
+	fake.gathererMutex.Lock()
+	ret, specificReturn := fake.gathererReturnsOnCall[len(fake.gathererArgsForCall)]
+	fake.gathererArgsForCall = append(fake.gathererArgsForCall, struct {
+		arg1 prometheus.Gatherer
+	}{arg1})
+	stub := fake.GathererStub
+	fakeReturns := fake.gathererReturns
+	fake.recordInvocation("Gatherer", []interface{}{arg1})
+	fake.gathererMutex.Unlock()
+	if stub != nil {
+		return stub(arg1)
+	}
+	if specificReturn {
+		return ret.result1
+	}
+	return fakeReturns.result1
+}
+
+func (fake *MetricsPusher) GathererCallCount() int {
+	fake.gathererMutex.RLock()
+	defer fake.gathererMutex.RUnlock()
+	return len(fake.gathererArgsForCall)
+}
+
+func (fake *MetricsPusher) GathererCalls(stub func(prometheus.Gatherer) metrics.Pusher) {
+	fake.gathererMutex.Lock()
+	defer fake.gathererMutex.Unlock()
+	fake.GathererStub = stub
+}
+
+func (fake *MetricsPusher) GathererArgsForCall(i int) prometheus.Gatherer {
+	fake.gathererMutex.RLock()
+	defer fake.gathererMutex.RUnlock()
+	argsForCall := fake.gathererArgsForCall[i]
+	return argsForCall.arg1
+}
+
+func (fake *MetricsPusher) GathererReturns(result1 metrics.Pusher) {
+	fake.gathererMutex.Lock()
+	defer fake.gathererMutex.Unlock()
+	fake.GathererStub = nil
+	fake.gathererReturns = struct {
+		result1 metrics.Pusher
+	}{result1}
+}
+
+func (fake *MetricsPusher) GathererReturnsOnCall(i int, result1 metrics.Pusher) {
+	fake.gathererMutex.Lock()
+	defer fake.gathererMutex.Unlock()
+	fake.GathererStub = nil
+	if fake.gathererReturnsOnCall == nil {
+		fake.gathererReturnsOnCall = make(map[int]struct {
+			result1 metrics.Pusher
+		})
+	}
+	fake.gathererReturnsOnCall[i] = struct {
+		result1 metrics.Pusher
+	}{result1}
 }
 
 func (fake *MetricsPusher) Push(arg1 context.Context) error {
