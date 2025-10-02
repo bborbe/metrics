@@ -30,12 +30,12 @@ type Pusher interface {
 // or a custom HTTP client before calling Push.
 func NewPusher(
 	url string,
-	name Name,
+	jobName Name,
 ) Pusher {
 	return &pusher{
 		pusher: push.New(
 			url,
-			name.String(),
+			jobName.String(),
 		),
 	}
 }
