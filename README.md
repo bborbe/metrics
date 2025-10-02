@@ -52,15 +52,3 @@ if err := pusher.Push(context.Background()); err != nil {
     // handle error
 }
 ```
-
-## Development
-
-```bash
-make precommit  # Format, generate, test, and check
-make test       # Run tests
-make check      # Run linters and security checks
-```
-
-## License
-
-BSD-style license. Copyright Benjamin Borbe.
