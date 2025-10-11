@@ -8,6 +8,9 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.3.1
+- Rename parameter from 'name' to 'jobName' in NewPusher for better clarity
+
 ## v0.3.0
 
 - fix testsmak
