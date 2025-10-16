@@ -7,11 +7,12 @@ package metrics_test
 import (
 	"context"
 
-	"github.com/bborbe/metrics"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
 	"github.com/onsi/gomega/ghttp"
 	"github.com/prometheus/client_golang/prometheus"
+
+	"github.com/bborbe/metrics"
 )
 
 var _ = Describe("Pusher", func() {

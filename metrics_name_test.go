@@ -5,9 +5,10 @@
 package metrics_test
 
 import (
-	"github.com/bborbe/metrics"
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
+
+	"github.com/bborbe/metrics"
 )
 
 var _ = Describe("BuildName", func() {
