@@ -11,7 +11,7 @@ ensure:
 
 format:
 	find . -type f -name '*.go' -not -path './vendor/*' -exec gofmt -w "{}" +
-	go run -mod=mod github.com/incu6us/goimports-reviser/v3 -project-name github.com/bborbe/skeleton -format -excludes vendor ./...
+	go run -mod=mod github.com/incu6us/goimports-reviser/v3 -project-name github.com/bborbe/metrics -format -excludes vendor ./...
 	find . -type d -name vendor -prune -o -type f -name '*.go' -print0 | xargs -0 -n 10 go run -mod=mod github.com/segmentio/golines --max-len=100 -w
 
 generate:
