@@ -44,18 +44,21 @@ import (
     "github.com/prometheus/client_golang/prometheus"
 )
 
-// Create a registry and register your metrics
-prometheusRegistry := prometheus.NewRegistry()
+func pushMetrics(ctx context.Context) error {
+    // Create a registry and register your metrics
+    prometheusRegistry := prometheus.NewRegistry()
 
-// Create and configure a pusher using the fluent API
-pusher := metrics.NewPusher(
-    "http://monitoring-pushgateway:9091",
-    metrics.BuildName("kafka", "backup", "my_topic"),
-).Gatherer(prometheusRegistry)
+    // Create and configure a pusher using the fluent API
+    pusher := metrics.NewPusher(
+        "http://monitoring-pushgateway:9091",
+        metrics.BuildName("kafka", "backup", "my_topic"),
+    ).Gatherer(prometheusRegistry)
 
-// Push metrics to the gateway
-if err := pusher.Push(context.Background()); err != nil {
-    // handle error
+    // Push metrics to the gateway (using context from caller)
+    if err := pusher.Push(ctx); err != nil {
+        return err
+    }
+    return nil
 }
 ```
 

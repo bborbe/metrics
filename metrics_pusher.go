@@ -13,15 +13,30 @@ import (
 
 //counterfeiter:generate -o mocks/metrics_pusher.go --fake-name MetricsPusher . Pusher
 
-// Pusher pushes metrics to a Prometheus Pushgateway.
+// Pusher pushes metrics to a Prometheus Pushgateway using a fluent API pattern.
+// Configure the pusher by chaining Gatherer(), Collector(), or Client() calls
+// before invoking Push() to send the metrics.
+//
+// Example:
+//
+//	pusher := metrics.NewPusher(url, jobName).
+//	    Gatherer(registry).
+//	    Collector(myCollector).
+//	    Client(customHTTPClient)
+//
+//	if err := pusher.Push(ctx); err != nil {
+//	    return err
+//	}
 type Pusher interface {
 	// Push pushes all registered metrics to the Pushgateway.
 	Push(ctx context.Context) error
-	// Gatherer sets the Gatherer to use for collecting metrics.
+	// Gatherer sets the Gatherer to use for collecting metrics and returns the Pusher
+	// for method chaining.
 	Gatherer(gatherer prometheus.Gatherer) Pusher
-	// Collector adds a Collector to the Pusher.
+	// Collector adds a Collector to the Pusher and returns the Pusher for method chaining.
 	Collector(collector prometheus.Collector) Pusher
-	// Client sets a custom HTTP client for the Pusher.
+	// Client sets a custom HTTP client for the Pusher and returns the Pusher for
+	// method chaining.
 	Client(httpClient push.HTTPDoer) Pusher
 }
 
