@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.4.0
+
+- update go and deps
+
 ## v0.3.3
 - Add package-level documentation (doc.go) with examples
 - Enhance Pusher interface documentation with fluent API pattern explanation
