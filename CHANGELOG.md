@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.4.6
+
+- chore: verified project health — precommit passes with exit code 0, no issues found
+
 ## v0.4.5
 
 - chore: verified project health — all tests pass, linting clean, precommit succeeds
