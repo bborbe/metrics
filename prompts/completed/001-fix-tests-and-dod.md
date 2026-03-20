@@ -1,10 +1,12 @@
 ---
-status: executing
+status: completed
+summary: Project is in a healthy state — make precommit passed with exit code 0, no fixes were required.
 container: metrics-001-fix-tests-and-dod
 dark-factory-version: v0.59.5-dirty
 created: "2026-03-20T12:58:06Z"
 queued: "2026-03-20T12:58:06Z"
 started: "2026-03-20T15:06:06Z"
+completed: "2026-03-20T15:10:02Z"
 ---
 
 <summary>
