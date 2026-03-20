@@ -1,7 +1,12 @@
 ---
-status: approved
+status: completed
+summary: Project health verified — make precommit passes with exit code 0, no issues found
+container: metrics-002-fix-tests-and-dod
+dark-factory-version: v0.59.5-dirty
 created: "2026-03-20T14:24:31Z"
 queued: "2026-03-20T14:24:31Z"
+started: "2026-03-20T15:10:05Z"
+completed: "2026-03-20T15:15:36Z"
 ---
 
 <summary>
