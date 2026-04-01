@@ -8,6 +8,13 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.4.7
+
+- Update numerous indirect dependencies (docker, containerd, opentelemetry, golang.org/x/*)
+- Replace k8s.io/kube-openapi replace directive with charmbracelet/x/cellbuf, denis-tingaikin/go-header, opencontainers/runtime-spec
+- Remove large exclude block for k8s.io and sigs.k8s.io packages
+- Add new indirect deps: clipperhouse/displaywidth, clipperhouse/stringish, clipperhouse/uax29
+
 ## v0.4.6
 
 - chore: verified project health — precommit passes with exit code 0, no issues found
