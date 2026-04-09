@@ -8,6 +8,14 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.4.8
+
+- Bump golangci-lint to v2.11.4
+- Bump osv-scanner to v2.3.5
+- Bump gosec to v2.25.0
+- Update multiple indirect dependencies
+- Add new OSV scanner vulnerability ignores
+
 ## v0.4.7
 
 - Update numerous indirect dependencies (docker, containerd, opentelemetry, golang.org/x/*)
