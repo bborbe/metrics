@@ -8,6 +8,13 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.5.0
+
+- Add `BuildInfoMetrics` interface for recording build provenance as Prometheus metric
+- Add `build_info` GaugeVec with version/commit/timestamp labels
+- Add `github.com/bborbe/time` dependency
+- Bump `golang.org/x/vuln` to v1.3.0 and other stdlib deps
+
 ## v0.4.8
 
 - Bump golangci-lint to v2.11.4
