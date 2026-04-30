@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.5.2
+
+- chore: Migrate to tools.env + Makefile @version pattern; remove tools.go and obsolete replace block. go.mod reduced from 453 to 43 lines
+
 ## v0.5.1
 
 - Add unit tests for `BuildInfoMetrics` covering value set, nil no-op, distinct label series, overwrite, and `-dirty` version support
