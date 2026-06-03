@@ -8,6 +8,14 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.5.4
+
+- bump go toolchain to 1.26.4
+- update bborbe/* deps (time, collection, errors, parse, validation)
+- update onsi/ginkgo v2.29.0, gomega v1.41.0
+- update golang.org/x/{net,sys,text} for security fixes
+- simplify Makefile: drop standalone errcheck/gosec, improve vulncheck with ignore list
+
 ## v0.5.3
 
 - bump Go toolchain to 1.26.3
