@@ -8,6 +8,13 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.5.5
+
+- Bump github.com/bborbe/time from v1.27.0 to v1.27.1
+- Bump github.com/onsi/ginkgo/v2 from v2.29.0 to v2.32.0
+- Bump github.com/onsi/gomega from v1.41.0 to v1.42.1
+- Bump golang.org/x/* indirect dependencies
+
 ## v0.5.4
 
 - bump go toolchain to 1.26.4
