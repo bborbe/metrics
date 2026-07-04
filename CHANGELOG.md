@@ -8,6 +8,12 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## v0.5.6
+
+- Bump github.com/bborbe/time to v1.27.3
+- Bump github.com/bborbe/collection, errors, math, parse, run, validation transitive deps
+- Bump github.com/getsentry/sentry-go to v0.46.2
+
 ## v0.5.5
 
 - Bump github.com/bborbe/time from v1.27.0 to v1.27.1
