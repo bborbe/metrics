@@ -70,3 +70,7 @@ pusher := metrics.NewPusher(url, jobName).
     Collector(myCollector).          // Add a specific collector
     Client(customHTTPClient)         // Use a custom HTTP client
 ```
+
+## License
+
+This project is licensed under the BSD-style license. See the [LICENSE](LICENSE) file for details.
