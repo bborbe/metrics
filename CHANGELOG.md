@@ -8,6 +8,11 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## Unreleased
+
+- chore: Run gofmt after golines in the format target so golines' wrapping is normalized before the gofmt lint check
+- chore: Bump golangci-lint to v2.13.1 and errcheck to v1.20.0 for Go 1.27 toolchain compatibility
+
 ## v0.5.12
 
 - update Go to 1.26.6 and update dependencies (fixes GO-2026-5026, GO-2026-5972, GO-2026-6090, GO-2026-6218)
