@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## Unreleased
+
+- chore: update Go to 1.27.0 and github.com/bborbe/time to v1.27.10, github.com/onsi/ginkgo/v2 to v2.32.1
+
 ## v0.5.13
 
 - chore: Run gofmt after golines in the format target so golines' wrapping is normalized before the gofmt lint check
