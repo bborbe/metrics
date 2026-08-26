@@ -11,15 +11,15 @@ require (
 
 require (
 	github.com/Masterminds/semver/v3 v3.4.0 // indirect
-	github.com/bborbe/collection v1.20.23 // indirect
-	github.com/bborbe/errors v1.5.20 // indirect
-	github.com/bborbe/math v1.4.4 // indirect
+	github.com/bborbe/collection v1.20.24 // indirect
+	github.com/bborbe/errors v1.5.21 // indirect
+	github.com/bborbe/math v1.4.7 // indirect
 	github.com/bborbe/parse v1.10.21 // indirect
 	github.com/bborbe/run v1.9.37 // indirect
-	github.com/bborbe/validation v1.4.22 // indirect
+	github.com/bborbe/validation v1.4.23 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/getsentry/sentry-go v0.48.0 // indirect
+	github.com/getsentry/sentry-go v0.49.0 // indirect
 	github.com/go-logr/logr v1.4.3 // indirect
 	github.com/go-task/slim-sprig/v3 v3.0.0 // indirect
 	github.com/golang/glog v1.2.5 // indirect
