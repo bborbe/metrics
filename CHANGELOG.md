@@ -10,6 +10,7 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+- chore: update go module dependencies
 - feat: opt into `autoMerge.trivial` for mechanically-trivial update PRs
 
 ## v0.5.15
