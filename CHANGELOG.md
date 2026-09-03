@@ -8,6 +8,10 @@ Please choose versions by [Semantic Versioning](http://semver.org/).
 * MINOR version when you add functionality in a backwards-compatible manner, and
 * PATCH version when you make backwards-compatible bug fixes.
 
+## Unreleased
+
+- chore: update github.com/bborbe/time to v1.27.12, github.com/onsi/gomega to v1.43.0
+
 ## v0.6.1
 
 - chore: update github.com/bborbe/time to v1.27.11
