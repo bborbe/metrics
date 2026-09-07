@@ -1,6 +1,6 @@
 module github.com/bborbe/metrics
 
-go 1.27.0
+go 1.27.1
 
 require (
 	github.com/bborbe/time v1.27.11
