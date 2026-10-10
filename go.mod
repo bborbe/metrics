@@ -3,7 +3,7 @@ module github.com/bborbe/metrics
 go 1.27.2
 
 require (
-	github.com/bborbe/time v1.27.15
+	github.com/bborbe/time v1.27.16
 	github.com/onsi/ginkgo/v2 v2.32.1
 	github.com/onsi/gomega v1.44.0
 	github.com/prometheus/client_golang v1.25.0
