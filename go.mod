@@ -3,7 +3,7 @@ module github.com/bborbe/metrics
 go 1.27.2
 
 require (
-	github.com/bborbe/time v1.27.15
+	github.com/bborbe/time v1.27.16
 	github.com/onsi/ginkgo/v2 v2.32.1
 	github.com/onsi/gomega v1.44.0
 	github.com/prometheus/client_golang v1.25.0
@@ -12,7 +12,7 @@ require (
 require (
 	github.com/Masterminds/semver/v3 v3.4.0 // indirect
 	github.com/bborbe/collection v1.21.0 // indirect
-	github.com/bborbe/errors v1.6.2 // indirect
+	github.com/bborbe/errors v1.6.3 // indirect
 	github.com/bborbe/math v1.4.11 // indirect
 	github.com/bborbe/parse v1.12.1 // indirect
 	github.com/bborbe/run v1.11.0 // indirect
@@ -29,11 +29,11 @@ require (
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_model v0.6.3 // indirect
-	github.com/prometheus/common v0.72.0 // indirect
+	github.com/prometheus/common v0.72.1 // indirect
 	github.com/prometheus/procfs v0.22.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	golang.org/x/mod v0.41.0 // indirect
-	golang.org/x/net v0.60.0 // indirect
+	golang.org/x/net v0.61.0 // indirect
 	golang.org/x/sync v0.24.0 // indirect
 	golang.org/x/sys v0.49.0 // indirect
 	golang.org/x/text v0.43.0 // indirect
@@ -41,4 +41,6 @@ require (
 	google.golang.org/protobuf v1.36.12 // indirect
 )
 
-exclude cloud.google.com/go v0.26.0
+exclude (
+	cloud.google.com/go v0.26.0
+)
