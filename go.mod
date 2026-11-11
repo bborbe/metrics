@@ -1,9 +1,9 @@
 module github.com/bborbe/metrics
 
-go 1.27.3
+go 1.27.4
 
 require (
-	github.com/bborbe/time v1.27.26
+	github.com/bborbe/time v1.27.28
 	github.com/onsi/ginkgo/v2 v2.34.0
 	github.com/onsi/gomega v1.44.0
 	github.com/prometheus/client_golang v1.25.0
@@ -14,8 +14,8 @@ require (
 	github.com/bborbe/collection v1.21.6 // indirect
 	github.com/bborbe/errors v1.6.6 // indirect
 	github.com/bborbe/math v1.4.19 // indirect
-	github.com/bborbe/parse v1.12.5 // indirect
-	github.com/bborbe/run v1.11.10 // indirect
+	github.com/bborbe/parse v1.12.7 // indirect
+	github.com/bborbe/run v1.11.11 // indirect
 	github.com/bborbe/validation v1.5.9 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
